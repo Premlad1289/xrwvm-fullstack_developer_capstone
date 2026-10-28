@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Car Dealership Portal</title>
+
+  <!-- Required stylesheets -->
+  <link rel="stylesheet" href="/static/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+
+  <style>
+    /* Optional: light page-specific tweaks that won’t fight your main CSS */
+    .navbar .nav-link.active {
+      font-weight: 600;
+      color: #0d6efd !important; /* Ensure visible active state */
+      border-bottom: 2px solid #0d6efd;
+    }
+    .hero-img {
+      max-height: 300px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: .5rem;
+    }
+    .contact-card {
+      border-radius: .75rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">Car Dealership</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/static/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/static/Inventory.html">Inventory</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/static/Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header class="container my-4">
+    <img src="/static/contactus.png" alt="Contact Us" class="hero-img shadow-sm">
+  </header>
+
+  <!-- Contact Details -->
+  <main class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="card contact-card shadow-sm p-4">
+          <h1 class="h3 mb-3">Contact Us</h1>
+          <p class="text-muted">We’d love to hear from you. Get in touch using any of the methods below.</p>
+
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2"><strong>Phone:</strong> +27 21 555 1234</li>
+            <li class="mb-2"><strong>Email:</strong> support@cardealership.example</li>
+            <li class="mb-2"><strong>Address:</strong> 123 Main Road, Cape Town, 8000, South Africa</li>
+            <li class="mb-2"><strong>Hours:</strong> Mon–Fri 8:00–17:00, Sat 9:00–13:00</li>
+          </ul>
+
+          <h2 class="h5">Send us a message</h2>
+          <form action="#" method="post" class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Name</label>
+              <input id="name" name="name" type="text" class="form-control" placeholder="Your full name" required>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" type="email" class="form-control" placeholder="you@example.com" required>
+            </div>
+            <div class="col-12">
+              <label for="subject" class="form-label">Subject</label>
+              <input id="subject" name="subject" type="text" class="form-control" placeholder="How can we help?" required>
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" rows="5" class="form-control" placeholder="Write your message..." required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="card shadow-sm">
+          <img src="/static/cars.jpeg" class="card-img-top" alt="Showroom cars">
+          <div class="card-body">
+            <h3 class="h6">Visit Our Showroom</h3>
+            <p class="mb-2">Drop by for a test drive or a chat with our sales team.</p>
+            <a class="btn btn-outline-secondary btn-sm" href="https://maps.google.com" target="_blank" rel="noopener">View on Map</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container mt-5 mb-4 text-center text-muted">
+    <small>&copy; <span id="year"></span> Car Dealership. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
